@@ -1,0 +1,18 @@
+{
+  "name": "cpuMeter",
+  "version": "0.0.1",
+  "description": "a node service to display CPU usage",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Elena and Bernard",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.10.0",
+    "socket.io": "^1.2.0",
+    "ejs": "^1.0.0",
+    "express-ejs-layouts": "^1.1.0"
+  }
+}
