@@ -4,13 +4,15 @@
   <head>
   <title>CPU Meter</title>
   <link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+  <link href='/style.css' rel='stylesheet' type='text/css'>
   <script src="/socket.io/socket.io.js"></script>
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   </head>
   <body>
 
     <header>
-      <section><h1>node CPU monitor</h1></section>
+      <section><img src="http://nodejs.org/images/logos/nodejs-dark.png"></section>
+      <section><h1>CPU monitor</h1></section>
       <section><p>node micro service that feeds your computers central processing unit's useage</p></section>
     </header>
 
@@ -23,6 +25,7 @@
       socket.on('useage', function(data) {
         var useage = data.useage
         $('body main samp').text(useage)
+        $('body main meter').attr('value',useage)
       });
     </script>
 

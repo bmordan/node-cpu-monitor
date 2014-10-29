@@ -8,6 +8,7 @@ var stream = monitor.start({ delay: 60, stream: true });
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 app.use(expressLayouts)
+app.use(require('express').static(__dirname + '/public'));
 
 app.get('/', function(req, res){
   res.render('index', { layout: 'layout'})
